@@ -3,12 +3,10 @@ services:
     image: backapp:backapp
     environment:
       SERVER_PORT: 8081
-    ports:
-    - 8081:8081
 
-  forntapp:
+  frontapp:
     image: frontapp:frontapp
     environment:
-      BACK_URL: 'http://localhost:8081'
+      BACK_URL: 'http://backapp:8081'
     ports:
     - 8080:8080
