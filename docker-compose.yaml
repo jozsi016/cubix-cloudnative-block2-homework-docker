@@ -1,0 +1,14 @@
+services:
+  backapp:
+    image: backapp:backapp
+    environment:
+      SERVER_PORT: 8081
+    ports:
+    - 8081:8081
+
+  forntapp:
+    image: frontapp:frontapp
+    environment:
+      BACK_URL: 'http://localhost:8081'
+    ports:
+    - 8080:8080
